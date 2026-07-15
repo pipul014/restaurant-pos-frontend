@@ -171,7 +171,6 @@ const Orders = () => {
       {isCategoryModalOpen && (
         <AddCategoryModal setIsCategoryModalOpen={setIsCategoryModalOpen} />
       )}
-
       <BottomNav />
     </section>
   );

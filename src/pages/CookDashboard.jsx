@@ -58,7 +58,9 @@ const getItemCountByStatus = (orders = [], statuses = []) => {
 };
 
 const CookDashboard = () => {
-  const workflow = useSelector((state) => state.settings?.workflow || "KITCHEN");
+  const workflow = useSelector(
+    (state) => state.settings?.workflow || "KITCHEN",
+  );
   const queryClient = useQueryClient();
   const [searchParams] = useSearchParams();
 
@@ -674,7 +676,10 @@ const CookDashboard = () => {
         <div className="max-w-xl text-center bg-[#262626] border border-[#333] rounded-2xl p-8">
           <GiCookingPot className="mx-auto text-5xl text-[#f6b100]" />
           <h1 className="text-2xl font-bold mt-4">Post Billing Mode Active</h1>
-          <p className="text-[#ababab] mt-2">Kitchen dashboard is disabled because orders are billed directly without the KDS workflow.</p>
+          <p className="text-[#ababab] mt-2">
+            Kitchen dashboard is disabled because orders are billed directly
+            without the KDS workflow.
+          </p>
         </div>
       </section>
     );

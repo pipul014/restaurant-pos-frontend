@@ -69,6 +69,9 @@ export const addOrder = (data) => axiosWrapper.post("/api/order", data);
 export const getOrders = (params = {}) =>
   axiosWrapper.get("/api/order", { params });
 
+export const createAndPayPostBillingOrder = (data) =>
+  axiosWrapper.post("/api/order/post-billing/checkout", data);
+
 export const getOrderById = (orderId) =>
   axiosWrapper.get(`/api/order/${orderId}`);
 
@@ -246,4 +249,5 @@ export const shareOrderTrackingWhatsapp = (trackingToken) =>
   axiosWrapper.get(`/api/public/track/${trackingToken}/share`);
 
 export const getRestaurantSettings = () => axiosWrapper.get("/api/settings");
-export const updateRestaurantWorkflow = (workflow) => axiosWrapper.patch("/api/settings/workflow", { workflow });
+export const updateRestaurantWorkflow = (workflow) =>
+  axiosWrapper.patch("/api/settings/workflow", { workflow });

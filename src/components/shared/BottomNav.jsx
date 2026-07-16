@@ -327,12 +327,12 @@ const BottomNav = () => {
                 activeClass="bg-green-500 text-white"
               />
 
-              <OrderTypeButton
+              {/* <OrderTypeButton
                 label="Takeaway"
                 active={orderType === "takeaway"}
                 onClick={() => setOrderType("takeaway")}
                 activeClass="bg-blue-500 text-white"
-              />
+              /> */}
 
               <OrderTypeButton
                 label="Dine-In"
